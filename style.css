@@ -5,6 +5,10 @@ html, body {
     text-align: center;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .page-wrapper {
     display: flex;
     justify-content: center;
@@ -30,13 +34,13 @@ html, body {
 }
 .slider > input:nth-of-type(8):checked ~ ul li:first-of-type {
     margin-left: -700%;
-}
+}*/
 .slider > input:nth-of-type(7):checked ~ ul li:first-of-type {
     margin-left: -600%;
 }
 .slider > input:nth-of-type(6):checked ~ ul li:first-of-type {
     margin-left: -500%;
-}*/
+}
 .slider > input:nth-of-type(5):checked ~ .slides li:first-of-type {
     margin-left: -400%;
 }
@@ -119,13 +123,14 @@ html, body {
 }
 
 .navigation {
+    width: 820px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     position: absolute;
-    bottom: -8px;
-    left: 50%;
+    bottom: -50px;
+    /*left: 50%;*/
     z-index: 10;
-    margin-bottom: -50px;
+    /*margin-bottom: -100px;*/
     font-size: 20px;
     /*line-height: 0;*/
     text-align: center;
@@ -159,23 +164,29 @@ html, body {
     cursor: pointer;
     border-radius: 50%;
     margin: 0 4px;
-    padding: 4px;
-    background: #3a3a3a;
+    padding: 6px;
+    background-color: dimgrey;
 }
-.dots label:hover:after {
+.dots label:hover::after {
     opacity: 1;
+    /*border: 2px solid aquamarine;*/
+    background-color: aquamarine;
+
 }
-.dots label:after {
+.dots label::after {
     content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -6px;
     margin-top: -6px;
-    background: aquamarine;
+    /*background: aquamarine;*/
     border-radius: 50%;
     padding: 6px;
     opacity: 0;
+
+    border: 2px solid aquamarine;
+    background: #3a3a3a;
 }
 .slider > .arrows {
     -webkit-touch-callout: none;
@@ -222,7 +233,7 @@ html, body {
     position: absolute;
     top: -50%;
     padding: 13px;
-    box-shadow: inset 2px -2px 0 1px #3a3a3a;
+    box-shadow: inset 2px -2px 0 1px dimgrey;
     cursor: pointer;
     -moz-transition: .15s;
     -o-transition: .15s;
@@ -268,7 +279,7 @@ html, body {
 .slider > input:nth-of-type(4):checked ~ .arrows label:nth-of-type(5),
 .slider > input:nth-of-type(5):checked ~ .arrows label:nth-of-type(6),
 .slider > input:nth-of-type(6):checked ~ .arrows label:nth-of-type(7),
-.slider > input:nth-of-type(7):checked ~ .arrows label:nth-of-type(8),
+.slider > input:nth-of-type(7):checked ~ .arrows label:nth-of-type(1),
 .slider > input:nth-of-type(8):checked ~ .arrows label:nth-of-type(9),
 .slider > input:nth-of-type(9):checked ~ .arrows label:nth-of-type(10),
 .slider > input:nth-of-type(10):checked ~ .arrows label:nth-of-type(11),
